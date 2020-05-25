@@ -41,6 +41,7 @@ public class RegistrarUsuarioLogin extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_registrar_login);
 
+
         mEditTextNombre = (EditText) findViewById(R.id.registrar_nombre);
         mEditTextApellido = (EditText) findViewById(R.id.registrar_apellido);
         mEditTextCorreo = (EditText) findViewById(R.id.registrar_correo);
