@@ -17,7 +17,7 @@
         app:srcCompat="@drawable/fondo" />
 
     <EditText
-        android:id="@+id/editText"
+        android:id="@+id/editTextCorreo"
         android:layout_width="278dp"
         android:layout_height="52dp"
         android:ems="10"
@@ -28,13 +28,14 @@
         app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.438" />
+        app:layout_constraintVertical_bias="0.474" />
 
     <EditText
-        android:id="@+id/editText2"
+        android:id="@+id/editTextContraseña"
         android:layout_width="278dp"
         android:layout_height="52dp"
         android:layout_marginTop="20dp"
+        android:layout_marginBottom="284dp"
         android:ems="10"
         android:hint="Contraseña"
         android:inputType="textPassword"
@@ -46,7 +47,7 @@
         app:layout_constraintVertical_bias="0.0" />
 
     <Button
-        android:id="@+id/button3"
+        android:id="@+id/buttonLogin"
         android:layout_width="278dp"
         android:layout_height="47dp"
         android:layout_marginBottom="212dp"
