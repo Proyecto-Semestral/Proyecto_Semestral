@@ -3,67 +3,78 @@ package com.example.proyectosemestral;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.ProgressDialog;
+import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseAuthUserCollisionException;
 
 public class IniciarSesion_login extends AppCompatActivity {
+    private EditText mEditTextCorreo;
+    private EditText mEditTextContraseña;
+    private Button mBotonLogin;
+    private FirebaseAuth mAuth;
 
-    private Button mButtonLogin;
-    private EditText mTextEmail;
-    private EditText mTextPassword;
-
-    private FirebaseAuth firebaseAuth;
+    private String correo = "";
+    private String contraseña = "";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_iniciar_sesion_login);
-        firebaseAuth = FirebaseAuth.getInstance();
 
-        mButtonLogin = (Button) findViewById(R.id.buttonLogin);
-        mTextEmail = (EditText) findViewById(R.id.editTextCorreo);
-        mTextPassword = (EditText) findViewById(R.id.editTextContraseña);
+        mEditTextCorreo = (EditText) findViewById(R.id.editText_Contraseña_login);
+        mEditTextContraseña = (EditText) findViewById(R.id.editText_Contraseña_login);
 
-        mButtonLogin.setOnClickListener(new View.OnClickListener() {
+        mAuth = FirebaseAuth.getInstance();
+
+        mBotonLogin = (Button) findViewById(R.id.buttonLogin);
+        mBotonLogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
-                    loginUsuario();
+                correo = mEditTextCorreo.getText().toString();
+                contraseña = mEditTextContraseña.getText().toString();
+
+                if (!correo.isEmpty() && !contraseña.isEmpty()) {
+
+                    loginUser();
+
+                }
+                else {
+                    Toast.makeText(IniciarSesion_login.this,"complete los datos requeridos",Toast.LENGTH_SHORT).show();
+                }
 
             }
         });
+
     }
 
-    private void loginUsuario(){
-        String email = mTextEmail.getText().toString().trim();
-        String password = mTextPassword.getText().toString().trim();
+    private void loginUser() {
 
-        if(TextUtils.isEmpty(email)){
-            Toast.makeText(this,"se debe ingresar un email",Toast.LENGTH_LONG.show());
-            return;
-        }
-        if(TextUtils.isEmpty(password)){
-            Toast.makeText(this,"se debe ingresar un password",Toast.LENGTH_LONG.show());
-            return;
-        }
+        mAuth.signInWithEmailAndPassword(correo, contraseña).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
+            @Override
+            public void onComplete(@NonNull Task<AuthResult> task) {
+                if (task.isSuccessful()) {
+                    startActivity(new Intent(IniciarSesion_login.this, MenuPrincipal.class));
+                    finish();
+                }
+                else {
+                    Toast.makeText(IniciarSesion_login.this,"su correo o contraseña son incorrectos",Toast.LENGTH_SHORT).show();
 
-        firebaseAuth.signInWithEmailAndPassword(email,password)
-                .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
-                    @Override
-                    public void onComplete(@NonNull Task<AuthResult> task) {
-                        if(task.isSuccessful()){
-                            Toast.makeText(this,"se debe ingresar un password",Toast.LENGTH_LONG.show());
-                        }
-                    }
-                })
+                }
+
+            }
+        });
     }
 }

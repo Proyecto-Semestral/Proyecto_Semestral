@@ -11,12 +11,14 @@ import android.widget.Button;
 public class MainActivity extends AppCompatActivity {
 
    private Button boton_registrar;
+   private Button boton_login;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        boton_login = findViewById(R.id.boton_login);
         boton_registrar = findViewById(R.id.button_registar_am);
 
         boton_registrar.setOnClickListener(new View.OnClickListener() {
@@ -25,6 +27,16 @@ public class MainActivity extends AppCompatActivity {
 
                 Intent boton_registrar = new Intent(MainActivity.this, RegistrarUsuarioLogin.class);
                 startActivity(boton_registrar);
+
+            }
+        });
+
+        boton_login.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Intent boton_login = new Intent(MainActivity.this, IniciarSesion_login.class);
+                startActivity(boton_login);
 
             }
         });
