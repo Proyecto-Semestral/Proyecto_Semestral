@@ -4,4 +4,9 @@
     <color name="colorPrimaryDark">#3700B3</color>
     <color name="colorAccent">#03DAC5</color>
     <color name="blanco">#ffffff</color>
+    <color name="celesteClaro">#c4feff</color>
+    <color name="celesteMedio">#8adefa</color>
+    <color name="morado">#a687ff</color>
+    <color name="negro">#000000</color>
+
 </resources>

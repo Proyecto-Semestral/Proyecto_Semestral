@@ -4,17 +4,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/celesteClaro"
     tools:context=".Confirmacion_registro_usuario">
 
-    <ImageView
-        android:id="@+id/imageView10"
-        android:layout_width="466dp"
-        android:layout_height="804dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/fondo" />
 
     <ImageView
         android:id="@+id/imageView11"
