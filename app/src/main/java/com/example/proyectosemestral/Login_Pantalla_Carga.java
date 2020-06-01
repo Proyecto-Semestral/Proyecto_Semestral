@@ -5,20 +5,17 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
-import android.view.View;
-import android.widget.Button;
 
-public class Confirmacion_registro_usuario extends AppCompatActivity {
-    private Button boton_continuar_confirmacion;
+public class Login_Pantalla_Carga extends AppCompatActivity {
     private static int SPLASH_TIME_OUT = 3000;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_confirmacion_registro_usuario);
+        setContentView(R.layout.activity_login__pantalla__carga);
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
-                Intent homeIntent = new Intent(Confirmacion_registro_usuario.this, MenuPrincipal.class);
+                Intent homeIntent = new Intent(Login_Pantalla_Carga.this, MenuPrincipal.class);
                 startActivity(homeIntent);
                 finish();
             }

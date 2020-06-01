@@ -17,6 +17,7 @@ import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
+
 import com.google.firebase.auth.FirebaseAuthUserCollisionException;
 
 public class IniciarSesion_login extends AppCompatActivity {
@@ -24,6 +25,7 @@ public class IniciarSesion_login extends AppCompatActivity {
     private EditText mEditTextContraseña;
     private Button mBotonLogin;
     private FirebaseAuth mAuth;
+    boolean exito = false;
 
     private String correo = "";
     private String contraseña = "";
@@ -33,7 +35,7 @@ public class IniciarSesion_login extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_iniciar_sesion_login);
 
-        mEditTextCorreo = (EditText) findViewById(R.id.editText_Contraseña_login);
+        mEditTextCorreo = (EditText) findViewById(R.id.editText_correo_login);
         mEditTextContraseña = (EditText) findViewById(R.id.editText_Contraseña_login);
 
         mAuth = FirebaseAuth.getInstance();
@@ -65,8 +67,9 @@ public class IniciarSesion_login extends AppCompatActivity {
         mAuth.signInWithEmailAndPassword(correo, contraseña).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
             @Override
             public void onComplete(@NonNull Task<AuthResult> task) {
+
                 if (task.isSuccessful()) {
-                    startActivity(new Intent(IniciarSesion_login.this, MenuPrincipal.class));
+                    startActivity(new Intent(IniciarSesion_login.this, Login_Pantalla_Carga.class));
                     finish();
                 }
                 else {

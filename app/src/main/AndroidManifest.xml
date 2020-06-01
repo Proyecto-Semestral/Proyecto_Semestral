@@ -9,9 +9,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MenuPrincipal"></activity>
-        <activity android:name=".RegistrarUsuarioLogin"></activity>
-        <activity android:name=".Confirmacion_registro_usuario"></activity>
+        <activity android:name=".Login_Pantalla_Carga"></activity>
+        <activity android:name=".MenuPrincipal" />
+        <activity android:name=".RegistrarUsuarioLogin" />
+        <activity android:name=".Confirmacion_registro_usuario" />
         <activity android:name=".IniciarSesion_login" />
         <activity
             android:name=".Pantallacarga"
@@ -24,7 +25,7 @@
         </activity>
         <activity
             android:name=".MainActivity"
-            android:theme="@style/Theme.AppCompat.NoActionBar"></activity>
+            android:theme="@style/Theme.AppCompat.NoActionBar" />
     </application>
 
 </manifest>
