@@ -9,14 +9,14 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Login_Pantalla_Carga"></activity>
-        <activity android:name=".MenuPrincipal" />
-        <activity android:name=".RegistrarUsuarioLogin" />
-        <activity android:name=".Confirmacion_registro_usuario" />
-        <activity android:name=".IniciarSesion_login" />
+        <activity android:name=".Login_Pantalla_Carga" android:theme="@style/AppTheme" />
+        <activity android:name=".MenuPrincipal" android:theme="@style/AppTheme" />
+        <activity android:name=".RegistrarUsuarioLogin" android:theme="@style/AppTheme" />
+        <activity android:name=".Confirmacion_registro_usuario" android:theme="@style/AppTheme" />
+        <activity android:name=".IniciarSesion_login" android:theme="@style/AppTheme" />
         <activity
             android:name=".Pantallacarga"
-            android:theme="@style/Theme.AppCompat.NoActionBar">
+            android:theme="@style/AppTheme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -25,7 +25,7 @@
         </activity>
         <activity
             android:name=".MainActivity"
-            android:theme="@style/Theme.AppCompat.NoActionBar" />
+            android:theme="@style/AppTheme" />
     </application>
 
 </manifest>
