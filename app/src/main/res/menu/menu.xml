@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/opcionGuantes"
+        android:icon="@drawable/guantesicono"
+        android:title="Guantes"/>
+    <item
+        android:id="@+id/opcionMascarilla"
+        android:icon="@drawable/mascarillaicono"
+        android:title="Mascarillas"/>
+    <item
+        android:id="@+id/opcionJabon"
+        android:icon="@drawable/jabonicono"
+        android:title="Jabones"/>
+</menu>
