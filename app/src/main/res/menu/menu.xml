@@ -1,15 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
-    <item
-        android:id="@+id/opcionGuantes"
-        android:icon="@drawable/guantesicono"
-        android:title="Guantes"/>
-    <item
-        android:id="@+id/opcionMascarilla"
-        android:icon="@drawable/mascarillaicono"
-        android:title="Mascarillas"/>
-    <item
-        android:id="@+id/opcionJabon"
-        android:icon="@drawable/jabonicono"
-        android:title="Jabones"/>
+    android:title="Productos">
+    <item android:title="Ofertas"
+        android:icon="@drawable/ofertasicono"
+        android:id="@+id/ofertas"></item>
+    <item android:title="Historial de compras"
+        android:icon="@drawable/historialicono"
+        android:id="@+id/historialdecompras"></item>
+    <group
+        android:id="@+id/grupo1">
+        <item
+            android:title="Productos">
+            <item android:title="Proteccion"
+                android:icon="@drawable/mascarillaicono"
+                android:id="@+id/op1"></item>
+            <item android:title="Higene"
+                android:icon="@drawable/guantesicono"
+                android:id="@+id/higene"></item>
+            <item android:title="Limpieza"
+                android:icon="@drawable/jabonicono"
+                android:id="@+id/limpieza"></item>
+        </item>
+    </group>
+
+    <item android:title="Cerrar Sesion"
+        android:icon="@drawable/cerrarsesion"
+        android:id="@+id/cerrarsesion"></item>
+
+
+
 </menu>
