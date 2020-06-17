@@ -19,6 +19,8 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+
+
         boton_login = findViewById(R.id.boton_login);
         boton_registrar = findViewById(R.id.button_registar_am);
         siguiente = findViewById(R.id.button2);
@@ -53,4 +55,10 @@ public class MainActivity extends AppCompatActivity {
         });
 
     }
+    @Override
+    public void onBackPressed() {
+        //remove call to the super class
+        //super.onBackPressed();
+    }
+
 }

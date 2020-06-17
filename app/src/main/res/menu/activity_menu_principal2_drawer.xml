@@ -6,13 +6,13 @@ tools:showIn="navigation_view">
 <group android:checkableBehavior="single"
     android:id="@+id/grupouno">
     <item
-        android:id="@+id/nav_home"
+        android:id="@+id/fragmentPrincipal"
         android:icon="@drawable/ic_menu_camera"
         android:title="@string/menu_home" />
     <item
-        android:id="@+id/nav_gallery"
+        android:id="@+id/fragment_ofertas"
         android:icon="@drawable/ic_menu_gallery"
-        android:title="holaa" />
+        android:title="Ofertas" />
 </group>
 <group android:checkableBehavior="single"
     android:id="@+id/grupodos">
@@ -31,6 +31,6 @@ tools:showIn="navigation_view">
 </group>
     <item android:title="Cerrar Sesion"
         android:icon="@drawable/cerrarsesion"
-        android:id="@+id/cerrarsesion"></item>
+        android:id="@+id/fragment_cerrar_sesion"></item>
 
 </menu>

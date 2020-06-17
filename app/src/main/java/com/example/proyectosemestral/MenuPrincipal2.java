@@ -2,6 +2,7 @@ package com.example.proyectosemestral;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.Menu;
 
@@ -9,6 +10,7 @@ import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.snackbar.Snackbar;
 import com.google.android.material.navigation.NavigationView;
 
+import androidx.core.view.GravityCompat;
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
 import androidx.navigation.ui.AppBarConfiguration;
@@ -26,6 +28,7 @@ import java.util.ArrayList;
 public class MenuPrincipal2 extends AppCompatActivity implements IComunicaFragment {
 
     private AppBarConfiguration mAppBarConfiguration;
+
 
 
     @Override
@@ -51,7 +54,7 @@ public class MenuPrincipal2 extends AppCompatActivity implements IComunicaFragme
         // Passing each menu ID as a set of Ids because each
         // menu should be considered as top level destinations.
         mAppBarConfiguration = new AppBarConfiguration.Builder(
-                 R.id.nav_gallery, R.id.fragment_Proteccion,R.id.fragment_Higiene,R.id.fragment_Limpieza)
+                 R.id.fragmentPrincipal, R.id.fragment_Proteccion,R.id.fragment_Higiene,R.id.fragment_Limpieza,R.id.fragment_ofertas,R.id.fragment_cerrar_sesion)
                 .setDrawerLayout(drawer)
                 .build();
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment);
@@ -77,4 +80,6 @@ public class MenuPrincipal2 extends AppCompatActivity implements IComunicaFragme
     public void enviarproducto(Productos producto) {
 
     }
+
+
 }

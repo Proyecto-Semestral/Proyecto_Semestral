@@ -9,25 +9,28 @@
     <com.google.android.material.appbar.AppBarLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:background="@color/morado"
         android:theme="@style/AppTheme.AppBarOverlay">
 
         <androidx.appcompat.widget.Toolbar
             android:id="@+id/toolbar"
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
-            android:background="?attr/colorPrimary"
+            android:background="@color/morado"
             app:popupTheme="@style/AppTheme.PopupOverlay" />
 
     </com.google.android.material.appbar.AppBarLayout>
 
     <include layout="@layout/content_menu_principal2" />
 
+
     <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:layout_width="272dp"
         android:id="@+id/fab"
-        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:background="@color/morado"
         android:layout_gravity="bottom|end"
-        android:layout_margin="@dimen/fab_margin"
-        app:srcCompat="@drawable/carrito" />
+        android:layout_margin="16dp"
+        android:src="@drawable/carrito" />
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

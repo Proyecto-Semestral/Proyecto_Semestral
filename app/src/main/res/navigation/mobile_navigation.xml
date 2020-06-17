@@ -3,19 +3,16 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/mobile_navigation"
-    app:startDestination="@id/nav_gallery">
-
+    app:startDestination="@id/fragmentPrincipal">
 
 
     <fragment
-        android:id="@+id/nav_gallery"
-        android:name="com.example.proyectosemestral.ui.gallery.GalleryFragment"
-        android:label="@string/menu_gallery"
-        tools:layout="@layout/fragment_ofertas" >
-        <action
-            android:id="@+id/action_HomeFragment_to_HomeSecondFragment"
-            app:destination="@id/nav_home_second" />
-    </fragment>
+        android:id="@+id/fragmentPrincipal"
+        android:name="com.example.proyectosemestral.FragmentPrincipal"
+        android:label="fragment_principal"
+        tools:layout="@layout/fragment_principal" />
+
+
     <fragment
         android:id="@+id/fragment_Proteccion"
         android:name="com.example.proyectosemestral.Fragment_Proteccion"
@@ -31,4 +28,15 @@
         android:name="com.example.proyectosemestral.Fragment_Limpieza"
         android:label="fragment__limpieza"
         tools:layout="@layout/fragment__limpieza" />
+    <fragment
+        android:id="@+id/fragment_ofertas"
+        android:name="com.example.proyectosemestral.Fragment_ofertas"
+        android:label="fragment_ofertas"
+        tools:layout="@layout/fragment_ofertas" />
+    <fragment
+        android:id="@+id/fragment_cerrar_sesion"
+        android:name="com.example.proyectosemestral.Fragment_cerrar_sesion"
+        android:label="fragment_cerrar_sesion"
+        tools:layout="@layout/fragment_cerrar_sesion" />
+
 </navigation>
