@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:tools="http://schemas.android.com/tools"
+tools:showIn="navigation_view">
+
+<group android:checkableBehavior="single"
+    android:id="@+id/grupouno">
+    <item
+        android:id="@+id/nav_home"
+        android:icon="@drawable/ic_menu_camera"
+        android:title="@string/menu_home" />
+    <item
+        android:id="@+id/nav_gallery"
+        android:icon="@drawable/ic_menu_gallery"
+        android:title="holaa" />
+</group>
+<group android:checkableBehavior="single"
+    android:id="@+id/grupodos">
+    <item
+        android:id="@+id/fragment_Proteccion"
+        android:icon="@drawable/ic_menu_slideshow"
+        android:title="Proteccion" />
+    <item
+        android:id="@+id/fragment_Higiene"
+        android:icon="@drawable/ic_menu_slideshow"
+        android:title="Higiene" />
+    <item
+        android:id="@+id/fragment_Limpieza"
+        android:icon="@drawable/ic_menu_slideshow"
+        android:title="Limpieza" />
+</group>
+    <item android:title="Cerrar Sesion"
+        android:icon="@drawable/cerrarsesion"
+        android:id="@+id/cerrarsesion"></item>
+
+</menu>

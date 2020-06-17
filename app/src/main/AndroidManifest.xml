@@ -8,11 +8,14 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
 
+        <activity android:name=".CarritoListado" />
+
+        <activity
+            android:name=".MenuPrincipal2"
+            android:label="@string/title_activity_menu_principal2"
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".Login_Pantalla_Carga"
-            android:theme="@style/AppTheme" />
-        <activity
-            android:name=".MenuPrincipal"
             android:theme="@style/AppTheme" />
         <activity
             android:name=".RegistrarUsuarioLogin"

@@ -6,6 +6,9 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 
+import com.example.proyectosemestral.MenuPrincipal2;
+import com.example.proyectosemestral.R;
+
 public class Login_Pantalla_Carga extends AppCompatActivity {
     private static int SPLASH_TIME_OUT = 3000;
     @Override
@@ -15,7 +18,7 @@ public class Login_Pantalla_Carga extends AppCompatActivity {
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
-                Intent homeIntent = new Intent(Login_Pantalla_Carga.this, MenuPrincipal.class);
+                Intent homeIntent = new Intent(Login_Pantalla_Carga.this, MenuPrincipal2.class);
                 startActivity(homeIntent);
                 finish();
             }
