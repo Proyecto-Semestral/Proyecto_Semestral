@@ -11,7 +11,6 @@ tools:showIn="navigation_view">
         android:title="@string/menu_home" />
     <item
         android:id="@+id/fragment_ofertas"
-        android:icon="@drawable/ic_menu_gallery"
         android:title="Ofertas" />
 </group>
 <group android:checkableBehavior="single"
@@ -30,7 +29,6 @@ tools:showIn="navigation_view">
         android:title="Limpieza" />
 </group>
     <item android:title="Cerrar Sesion"
-        android:icon="@drawable/cerrarsesion"
         android:id="@+id/fragment_cerrar_sesion"></item>
 
 </menu>

@@ -2,29 +2,23 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     android:title="Productos">
     <item android:title="Ofertas"
-        android:icon="@drawable/ofertasicono"
         android:id="@+id/ofertas"></item>
     <item android:title="Historial de compras"
-        android:icon="@drawable/historialicono"
         android:id="@+id/historialdecompras"></item>
     <group
         android:id="@+id/grupo1">
         <item
             android:title="Productos">
             <item android:title="Proteccion"
-                android:icon="@drawable/mascarillaicono"
                 android:id="@+id/op1"></item>
             <item android:title="Higene"
-                android:icon="@drawable/guantesicono"
                 android:id="@+id/higene"></item>
             <item android:title="Limpieza"
-                android:icon="@drawable/jabonicono"
                 android:id="@+id/limpieza"></item>
         </item>
     </group>
 
     <item android:title="Cerrar Sesion"
-        android:icon="@drawable/cerrarsesion"
         android:id="@+id/cerrarsesion"></item>
 
 

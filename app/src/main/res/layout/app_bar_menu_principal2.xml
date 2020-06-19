@@ -30,7 +30,6 @@
         android:layout_height="wrap_content"
         android:background="@color/morado"
         android:layout_gravity="bottom|end"
-        android:layout_margin="16dp"
-        android:src="@drawable/carrito" />
+        android:layout_margin="16dp" />
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

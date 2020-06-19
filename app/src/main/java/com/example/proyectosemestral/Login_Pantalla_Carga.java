@@ -14,7 +14,7 @@ public class Login_Pantalla_Carga extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_login__pantalla__carga);
+        setContentView(R.layout.activity_pantallacarga);
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {

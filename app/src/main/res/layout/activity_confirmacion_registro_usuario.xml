@@ -8,25 +8,16 @@
     tools:context=".Confirmacion_registro_usuario">
 
 
-    <ImageView
-        android:id="@+id/imageView11"
-        android:layout_width="278dp"
-        android:layout_height="201dp"
-        android:layout_marginTop="292dp"
+    <com.airbnb.lottie.LottieAnimationView
+        android:layout_width="423dp"
+        android:layout_height="371dp"
+        android:layout_marginTop="180dp"
+        android:layout_marginBottom="180dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/ticket_confirmacion" />
-
-    <ImageView
-        android:id="@+id/imageView13"
-        android:layout_width="372dp"
-        android:layout_height="522dp"
-        android:layout_marginStart="32dp"
-        android:layout_marginBottom="204dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:srcCompat="@drawable/texto_confirmacionuno" />
-
+        app:lottie_fileName="accountregister.json"
+        app:lottie_loop="true"
+        app:lottie_autoPlay="true"/>
 </androidx.constraintlayout.widget.ConstraintLayout>

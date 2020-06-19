@@ -18,7 +18,7 @@ import com.example.proyectosemestral.Productos;
 import com.example.proyectosemestral.R;
 
 import java.util.ArrayList;
-
+import java.util.List;
 
 
 /**
@@ -37,11 +37,9 @@ public class Fragment_Proteccion extends Fragment {
     private String mParam2;
 
 
-    RecyclerView recyclerViewProductos;
-    ArrayList<Productos>ListaProductos;
-
-    Activity activity;
-    IComunicaFragment interfaceComunicaFragment;
+    View v;
+    private RecyclerView myrecyclerview;
+    private List<Productos>listaProductos;
 
     public Fragment_Proteccion() {
         // Required empty public constructor
@@ -65,54 +63,34 @@ public class Fragment_Proteccion extends Fragment {
         return fragment;
     }
 
-
+    @Override
+    public void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+    listaProductos = new ArrayList<>();
+    listaProductos.add(new Productos("cubre calzado","Precio$100","",R.drawable.proteccionuno,R.drawable.proteccionuno));
+    listaProductos.add(new Productos("alcohol 70°","Precio$2.990","",R.drawable.protecciondos,R.drawable.protecciondos));
+    listaProductos.add(new Productos("guantes latex","Precio$3.990","",R.drawable.protecciontres,R.drawable.protecciontres));
+    listaProductos.add(new Productos("guantes nitrilo","Precio$5.990","",R.drawable.proteccioncuatro,R.drawable.proteccioncuatro));
+    listaProductos.add(new Productos("guantes esteril","Precio$550","",R.drawable.proteccioncinco,R.drawable.proteccioncinco));
+    listaProductos.add(new Productos("guantes nitrilo negro","Precio$5.990","",R.drawable.proteccionseis,R.drawable.proteccionseis));
+    listaProductos.add(new Productos("mascara protectora","Precio$3.990","",R.drawable.proteccionsiete,R.drawable.proteccionsiete));
+    listaProductos.add(new Productos("mascarilla n95","Precio$5.990","",R.drawable.proteccionocho,R.drawable.proteccionocho));
+    listaProductos.add(new Productos("repuesto mascara","Precio$5.990","",R.drawable.proteccionnueve,R.drawable.proteccionnueve));
+    listaProductos.add(new Productos("toallita esteril","Precio$300","",R.drawable.protecciondies,R.drawable.protecciondies));
+    }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        final View vist= inflater.inflate(R.layout.fragment__proteccion, container, false);
-        ListaProductos= new ArrayList<>();
-
-        recyclerViewProductos= (RecyclerView) vist.findViewById(R.id.recyclerviewproducto);
-
-
-        recyclerViewProductos.setLayoutManager(new LinearLayoutManager(getContext()));
-
-        ElementosProducto();
-
-        AdaptadorProductosMenuPrincipal adapter= new AdaptadorProductosMenuPrincipal((ListaProductos));
-
-        adapter.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                interfaceComunicaFragment.enviarproducto(ListaProductos.get(recyclerViewProductos.getChildAdapterPosition(vist)));
-            }
-        });
-
-        recyclerViewProductos.setAdapter(adapter);
-
-        return vist;
+         v= inflater.inflate(R.layout.fragment__proteccion, container, false);
+        myrecyclerview = (RecyclerView) v.findViewById(R.id.recyclerviewproducto);
+        AdaptadorProductosMenuPrincipal adaptadorProductosMenuPrincipal = new AdaptadorProductosMenuPrincipal(getContext(),listaProductos);
+        myrecyclerview.setLayoutManager(new LinearLayoutManager(getActivity()));
+        myrecyclerview.setAdapter(adaptadorProductosMenuPrincipal);
+        return v;
     }
 
-    private void ElementosProducto() {
-        ListaProductos.add(new Productos("cubre calzado","Precio$100","",R.drawable.proteccionuno,R.drawable.proteccionuno));
-        ListaProductos.add(new Productos("alcohol 70°","Precio$2.990","",R.drawable.protecciondos,R.drawable.protecciondos));
-        ListaProductos.add(new Productos("guantes latex","Precio$3.990","",R.drawable.protecciontres,R.drawable.protecciontres));
-        ListaProductos.add(new Productos("guantes nitrilo","Precio$5.990","",R.drawable.proteccioncuatro,R.drawable.proteccioncuatro));
-        ListaProductos.add(new Productos("guantes esteril","Precio$550","",R.drawable.proteccioncinco,R.drawable.proteccioncinco));
-        ListaProductos.add(new Productos("guantes nitrilo negro","Precio$5.990","",R.drawable.proteccionseis,R.drawable.proteccionseis));
-        ListaProductos.add(new Productos("mascara protectora","Precio$3.990","",R.drawable.proteccionsiete,R.drawable.proteccionsiete));
-        ListaProductos.add(new Productos("mascarilla n95","Precio$5.990","",R.drawable.proteccionocho,R.drawable.proteccionocho));
-        ListaProductos.add(new Productos("repuesto mascara","Precio$5.990","",R.drawable.proteccionnueve,R.drawable.proteccionnueve));
-        ListaProductos.add(new Productos("toallita esteril","Precio$300","",R.drawable.protecciondies,R.drawable.protecciondies));
-    }
 
-    @Override
-    public void onAttach(Context context){
-        super.onAttach(context);
-        if (context instanceof Activity){
-            this.activity= (Activity)context;
-            interfaceComunicaFragment= (IComunicaFragment) this.activity;
-        }
-    }
+
+
 }

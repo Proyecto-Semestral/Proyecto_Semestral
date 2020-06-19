@@ -65,7 +65,7 @@ public class Fragment_Limpieza extends Fragment {
         }
     }
 
-    @Override
+    /*@Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
             View vist= inflater.inflate(R.layout.fragment__proteccion, container, false);
@@ -95,5 +95,5 @@ public class Fragment_Limpieza extends Fragment {
         ListaProductos.add(new Productos("titulo18","descripcion","",R.drawable.logousuario,R.drawable.logousuario));
         ListaProductos.add(new Productos("titulo19","descripcion","",R.drawable.logousuario,R.drawable.logousuario));
         ListaProductos.add(new Productos("titulo20","descripcion","",R.drawable.logousuario,R.drawable.logousuario));
-    }
+    }*/
 }

@@ -65,10 +65,10 @@ public class Fragment_Higiene extends Fragment {
         }
     }
 
-    @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
-        View vist= inflater.inflate(R.layout.fragment__proteccion, container, false);
+    //verride
+   //ublic View onCreateView(LayoutInflater inflater, ViewGroup container,
+                             //ndle savedInstanceState) {
+       /* View vist= inflater.inflate(R.layout.fragment__proteccion, container, false);
         ListaProductos= new ArrayList<>();
 
         recyclerViewProductos= (RecyclerView) vist.findViewById(R.id.recyclerviewproducto);
@@ -95,5 +95,5 @@ public class Fragment_Higiene extends Fragment {
         ListaProductos.add(new Productos("titulo18","descripcion","",R.drawable.logousuario,R.drawable.logousuario));
         ListaProductos.add(new Productos("titulo19","descripcion","",R.drawable.logousuario,R.drawable.logousuario));
         ListaProductos.add(new Productos("titulo20","descripcion","",R.drawable.logousuario,R.drawable.logousuario));
-    }
+    }*/
 }

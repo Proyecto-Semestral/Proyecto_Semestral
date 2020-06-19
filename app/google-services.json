@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "346657101527",
+    "firebase_url": "https://proyecto-semestral-2eac8.firebaseio.com",
+    "project_id": "proyecto-semestral-2eac8",
+    "storage_bucket": "proyecto-semestral-2eac8.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:346657101527:android:fdc70f3c0275df58628292",
+        "android_client_info": {
+          "package_name": "com.example.proyectosemestral"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "346657101527-hoj8m54g5g8og65hdoo12ejiejobn0as.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.proyectosemestral",
+            "certificate_hash": "cd040dfc991539d44b47da4345221283d31da3aa"
+          }
+        },
+        {
+          "client_id": "346657101527-03e5j2soqrgo6a633r71tmsn90acqeet.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDHr6ESuv2yflu9Yc34SixnosyEJRUpd1Y"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "346657101527-03e5j2soqrgo6a633r71tmsn90acqeet.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

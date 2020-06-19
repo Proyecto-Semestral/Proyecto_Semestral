@@ -9,7 +9,7 @@ import android.widget.Button;
 
 public class Confirmacion_registro_usuario extends AppCompatActivity {
     private Button boton_continuar_confirmacion;
-    private static int SPLASH_TIME_OUT = 3000;
+    private static int SPLASH_TIME_OUT = 1600;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
